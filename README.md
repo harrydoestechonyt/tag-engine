@@ -1,2 +1,2 @@
-# tag-engine
+# Tag Engine
 Tag Engine for Gorilla Tag fangames
