@@ -8,6 +8,18 @@ A free, powerful and open-source Tag Engine for Gorilla Tag fangames
 
 **This assumes you have already have PhotonVR and the other stuff set up.**
 
+## Credits
+
+If you use this Tag Engine in your game, please give credit to the original author, **HarryDoesTech**.  
+Credits should be displayed in the game’s credits screen, documentation, or other prominent places.
+
+Example credit:
+> **Tag Engine by HarryDoesTech**  
+> For more information, visit [GitHub Profile](https://github.com/harrydoestechonyt)
+
+This is required under the terms of the MIT License.
+
+
 ## Dependencies
 To set up, make sure you have these packages installed:
 
