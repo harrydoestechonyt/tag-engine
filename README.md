@@ -4,8 +4,10 @@ A free, powerful and open-source Tag Engine for Gorilla Tag fangames
 
 [![Download](https://img.shields.io/badge/Download-blue.svg)](https://github.com/harrydoestechonyt/tag-engine/releases)
 
-## IMPORTATNT!
-If you encounter any bugs, please create a new issue [here](https://github.com/harrydoestechonyt/tag-engine/issues/new)
+## IMPORTANT!
+If you encounter any bugs, please create a new issue [here](https://github.com/harrydoestechonyt/tag-engine/issues/new).  
+Be sure to include details such as your Unity version, error logs, and steps to reproduce the bug.
+
 
 
 # Contributing
@@ -44,9 +46,9 @@ To set up, make sure you have these packages installed:
 
 Watch the video here on how to add it:
 
-https://github.com/user-attachments/assets/2ab79e1b-c1c9-4e86-86f7-3909a98131dc
+[![How to Set Up](https://img.youtube.com/vi/x2COQWejvJY/0.jpg)](https://youtu.be/x2COQWejvJY)
 
-I don't know what happened to the audio quality 💀
+
 
 
 # Scripting using the engine
@@ -57,4 +59,4 @@ In all scripts you plan to use this engine, make sure to put
 using HarryDoesTechStudios.TagEngine;
 ```
 
-in an scripts whre you need to use the engine (i.e Tag Zone)
+in any scripts where you need to use the engine (i.e Tag Zone)
