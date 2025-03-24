@@ -7,6 +7,11 @@ A free, powerful and open-source Tag Engine for Gorilla Tag fangames
 ## IMPORTATNT!
 If you encounter any bugs, please create a new issue [here](https://github.com/harrydoestechonyt/tag-engine/issues/new)
 
+
+# Contributing
+
+Feel free to fork the repository, create issues, or submit pull requests. Contributions are welcome to make TagEngine even better!
+
 # Setting up
 
 **This assumes you have already have PhotonVR and the other stuff set up.**
@@ -53,7 +58,3 @@ using HarryDoesTechStudios.TagEngine;
 ```
 
 in an scripts whre you need to use the engine (i.e Tag Zone)
-
-# Contributing
-
-Feel free to fork the repository, create issues, or submit pull requests. Contributions are welcome to make TagEngine even better!
