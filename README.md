@@ -4,6 +4,9 @@ A free, powerful and open-source Tag Engine for Gorilla Tag fangames
 
 [![Download](https://img.shields.io/badge/Download-blue.svg)](https://github.com/harrydoestechonyt/tag-engine/releases)
 
+## IMPORTATNT!
+If you encounter any bugs, please create a new issue [here](https://github.com/harrydoestechonyt/tag-engine/issues/new)
+
 # Setting up
 
 **This assumes you have already have PhotonVR and the other stuff set up.**
