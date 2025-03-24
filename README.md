@@ -42,7 +42,9 @@ To set up, make sure you have these packages installed:
 
 In all scripts you plan to use this engine, make sure to put
 
-```using HarryDoesTechStudios.TagEngine;```
+```cs
+using HarryDoesTechStudios.TagEngine;
+```
 
 # Contributing
 
