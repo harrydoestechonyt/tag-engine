@@ -38,6 +38,12 @@ To set up, make sure you have these packages installed:
 ## Adding to the game
 
 
+# Scripting using the engine
+
+In all scripts you plan to use this engine, make sure to put
+
+```using HarryDoesTechStudios.TagEngine;```
+
 # Contributing
 
 Feel free to fork the repository, create issues, or submit pull requests. Contributions are welcome to make TagEngine even better!
