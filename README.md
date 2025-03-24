@@ -39,9 +39,9 @@ To set up, make sure you have these packages installed:
 
 Watch the video here on how to add it:
 
-
 https://github.com/user-attachments/assets/2ab79e1b-c1c9-4e86-86f7-3909a98131dc
 
+I don't know what happened to the fucking audio quality 💀
 
 
 # Scripting using the engine
