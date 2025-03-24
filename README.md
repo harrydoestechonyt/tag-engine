@@ -40,4 +40,4 @@ To set up, make sure you have these packages installed:
 
 # Contributing
 
-Feel free to fork the repository, create issues, or submit pull requests. Contributions are welcome to make the Tag Engine even better!
+Feel free to fork the repository, create issues, or submit pull requests. Contributions are welcome to make TagEngine even better!
