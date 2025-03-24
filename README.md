@@ -52,6 +52,8 @@ In all scripts you plan to use this engine, make sure to put
 using HarryDoesTechStudios.TagEngine;
 ```
 
+in an scripts whre you need to use the engine (i.e Tag Zone)
+
 # Contributing
 
 Feel free to fork the repository, create issues, or submit pull requests. Contributions are welcome to make TagEngine even better!
