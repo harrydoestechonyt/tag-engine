@@ -73,7 +73,7 @@ public class ExampleScript : MonoBehaviour{
   //Just tags on hit
 
   void OnTriggerEnter(Collider other){
-     if(other.tag == TagHitbox){
+     if(other.tag == TagHitBox){
        PhotonView target = other.GetComponent<PhotonView>();
        if(target != null){
           TagHitbox hitbox = target.GetComponent<TagHitbox>();
