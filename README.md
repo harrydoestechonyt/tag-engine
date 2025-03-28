@@ -60,3 +60,28 @@ using HarryDoesTechStudios.TagEngine;
 ```
 
 in any scripts where you need to use the engine (i.e Tag Zone)
+
+example script:
+```cs
+using HarryDoesTechStudios.TagEngine;
+using UnityEngine;
+using Photon.Pun;
+
+public class ExampleScript : MonoBehaviour{
+  public string TagHitBox;
+
+  //Just tags on hit
+
+  void OnTriggerEnter(Collider other){
+     if(other.tag == TagHitbox){
+       PhotonView target = other.GetComponent<PhotonView>();
+       if(target != null){
+          TagHitbox hitbox = target.GetComponent<TagHitbox>();
+          if(hitbox != null && !hitbox.isTag){
+            target.RPC(nameof(hitbox.OnHit), RpcTarget.AllBuffered, "a tag zone.");
+          }
+       }
+    }
+  }
+}
+```
