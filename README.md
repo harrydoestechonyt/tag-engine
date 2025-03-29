@@ -49,6 +49,9 @@ Watch the video here on how to add it:
 [![How to Set Up](https://img.youtube.com/vi/x2COQWejvJY/0.jpg)](https://youtu.be/x2COQWejvJY)
 
 
+### !!NEW UPDATE!!!
+Due to the new update, make sure to assign "Untagged" to TagEngine/Resources/Materials/Untagged.mat
+
 
 
 # Scripting using the engine
