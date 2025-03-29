@@ -30,6 +30,8 @@ namespace HarryDoesTechStudios.TagEngine
         public float velLimit;
         public float maxJmpSpd;
 
+        public Material untagged;
+
         [Header("If you use MeshRenderer")]
         public List<MeshRenderer> renderers;
         public bool useMeshRenderers;
@@ -190,7 +192,7 @@ namespace HarryDoesTechStudios.TagEngine
             {
                 gorillaPlayer.disableMovement = true;
                 yield return new WaitForSeconds(tagFreezeTime);
-                gorillaPlayer.disableMovement = true;
+                gorillaPlayer.disableMovement = false;
             }
         }
 
@@ -201,12 +203,34 @@ namespace HarryDoesTechStudios.TagEngine
             else
             {
                 isTag = (bool)stream.ReceiveNext();
-                if(useMeshRenderers)
+                if (useMeshRenderers)
                     foreach (MeshRenderer renderer in renderers)
+                    {
+                        renderer.material = isTag ? new Material(Shader.Find("Standard")) : untagged;
                         renderer.material.color = isTag ? Color.red : Color.blue;
+
+                    }
                 else if (useSkinnedMeshRenderers)
                     foreach (SkinnedMeshRenderer renderer in skinnedRenderers)
-                        renderer.material.color = isTag ? Color.red : Color.blue;
+                    {
+                        if(renderer.materials.Length > 1)
+                        {
+                            int idx = 0;
+                            Material[] mats = renderer.materials;
+                            foreach(Material mat in mats)
+                            {
+                                mats[idx] = isTag ? new Material(Shader.Find("Standard")) : untagged;
+                                mats[idx].color = isTag ? Color.red : Color.blue;
+                                idx++;
+                            }
+                            renderer.materials = mats;
+                        }
+                        else
+                        {
+                            renderer.material = isTag ? new Material(Shader.Find("Standard")) : untagged;
+                            renderer.material.color = isTag ? Color.red : Color.blue;
+                        }
+                    }
             }
         }
     }
