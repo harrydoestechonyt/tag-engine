@@ -51,9 +51,23 @@ namespace HarryDoesTechStudios.TagEngine
         float OmaxJmpSpd;
         float ojumpMultiplier;
         float oVelLimit;
+        Color originalColour;
 
         void Start()
         {
+            if (useMeshRenderers) {
+                foreach (Renderer renderer in renderers) {
+                    originalColour = renderer.material.color;
+                }
+            }
+
+            if (useSkinnedMeshRenderers)
+            {
+                foreach (SkinnedMeshRenderer renderer in skinnedRenderers)
+                {
+                    originalColour = renderer.material.color;
+                }
+            }
             Player = this.GetComponent<AudioSource>();
             ptView = this.GetComponent<PhotonView>();
             hands = FindObjectsOfType<Tagger>();
@@ -67,6 +81,28 @@ namespace HarryDoesTechStudios.TagEngine
             }
         }
 
+        void Update()
+        {
+            if (!isTag)
+            {
+                if (useMeshRenderers)
+                {
+                    foreach (Renderer renderer in renderers)
+                    {
+                        originalColour = renderer.material.color;
+                    }
+                }
+
+                if (useSkinnedMeshRenderers)
+                {
+                    foreach (SkinnedMeshRenderer renderer in skinnedRenderers)
+                    {
+                        originalColour = renderer.material.color;
+                    }
+                }
+            }
+        }
+
         [PunRPC]
         public void EndRound()
         {
@@ -76,13 +112,13 @@ namespace HarryDoesTechStudios.TagEngine
             if (useMeshRenderers)
             {
                 foreach (MeshRenderer renderer in renderers) { 
-                    renderer.material.color = Color.blue;
+                    renderer.material.color = originalColour;
                 }
             }else if (useSkinnedMeshRenderers)
             {
                 foreach (SkinnedMeshRenderer renderer in skinnedRenderers)
                 {
-                    renderer.material.color = Color.blue;
+                    renderer.material.color = originalColour;
                 }
             }
             foreach (Tagger t in hands)
@@ -207,7 +243,7 @@ namespace HarryDoesTechStudios.TagEngine
                     foreach (MeshRenderer renderer in renderers)
                     {
                         renderer.material = isTag ? new Material(Shader.Find("Standard")) : untagged;
-                        renderer.material.color = isTag ? Color.red : Color.blue;
+                        renderer.material.color = isTag ? Color.red : originalColour;
 
                     }
                 else if (useSkinnedMeshRenderers)
@@ -220,7 +256,7 @@ namespace HarryDoesTechStudios.TagEngine
                             foreach(Material mat in mats)
                             {
                                 mats[idx] = isTag ? new Material(Shader.Find("Standard")) : untagged;
-                                mats[idx].color = isTag ? Color.red : Color.blue;
+                                mats[idx].color = isTag ? Color.red : originalColour;
                                 idx++;
                             }
                             renderer.materials = mats;
@@ -228,7 +264,7 @@ namespace HarryDoesTechStudios.TagEngine
                         else
                         {
                             renderer.material = isTag ? new Material(Shader.Find("Standard")) : untagged;
-                            renderer.material.color = isTag ? Color.red : Color.blue;
+                            renderer.material.color = isTag ? Color.red : originalColour;
                         }
                     }
             }
