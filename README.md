@@ -3,7 +3,7 @@
 A free, powerful and open-source Tag Engine for Gorilla Tag fangames
 
 [![Download](https://img.shields.io/badge/Download-blue.svg)](https://github.com/harrydoestechonyt/tag-engine/releases/latest)
-[![Total Downloads](https://img.shields.io/github/downloads/harrydoestechonyt/tag-engine/total.svg)](https://github.com/harrydoestechonyt/tag-engine/releases/latest)
+[![Total Downloads](https://img.shields.io/github/downloads/harrydoestechonyt/tag-engine/total.svg)]()
 
 ## IMPORTANT!
 If you encounter any bugs, please create a new issue [here](https://github.com/harrydoestechonyt/tag-engine/issues/new).  
